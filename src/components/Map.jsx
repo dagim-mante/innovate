@@ -7,6 +7,17 @@ import { BackgroundCircles } from "./design/Header";
 import Heading from "./Heading";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import L from 'leaflet';
+
+import icon from 'leaflet/dist/images/marker-icon.png';
+import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+
+let DefaultIcon = L.icon({
+    iconUrl: icon,
+    shadowUrl: iconShadow
+});
+
+L.Marker.prototype.options.icon = DefaultIcon;
 
 const Map = () => {
   return (
@@ -22,7 +33,7 @@ const Map = () => {
                     <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
                     <MapContainer 
                         center={[9.003193, 38.78167]}
-                        zoom={13} scrollWheelZoom={true}
+                        zoom={14} scrollWheelZoom={true}
                         style={{height: '99.9%', width: '99.9%', borderRadius: '20 px'}}
                     >
                         <TileLayer

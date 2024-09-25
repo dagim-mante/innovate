@@ -9,6 +9,7 @@ import Roadmap from "./components/Roadmap";
 import Services from "./components/Services";
 import Partners from "./components/Partners";
 import Teams from "./components/Teams";
+import Map from "./components/Map";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Teams />
         <Roadmap />
         <Partners />
+        <Map />
         <Footer />
       </div>
 
